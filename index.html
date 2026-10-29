@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Arc for Chrome support, setup, and privacy information." />
+    <title>Arc for Chrome</title>
+    <style>
+      :root { color-scheme: light dark; --bg:#f7f7fb; --card:#fff; --text:#17141f; --muted:#625d6c; --line:#e5e1ea; --accent:#7257ff; --soft:#eeeaff; }
+      @media (prefers-color-scheme: dark) { :root { --bg:#111016; --card:#1a1821; --text:#f4f1f7; --muted:#aaa3b2; --line:#302c39; --soft:#29223f; } }
+      * { box-sizing:border-box; }
+      body { margin:0; font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--bg); color:var(--text); }
+      main { width:min(860px,calc(100% - 32px)); margin:0 auto; padding:56px 0 80px; }
+      header { padding:28px 0 40px; }
+      .mark { width:58px; height:58px; display:grid; place-items:center; border-radius:18px; color:white; font-size:30px; font-weight:800; background:linear-gradient(145deg,#8f5cff,#376bff); box-shadow:0 12px 32px #7257ff48; }
+      h1 { margin:20px 0 6px; font-size:clamp(38px,7vw,62px); letter-spacing:-.045em; line-height:1; }
+      h2 { margin:0 0 12px; font-size:25px; letter-spacing:-.025em; }
+      h3 { margin:24px 0 6px; font-size:18px; }
+      p { margin:8px 0 16px; }
+      .lead { max-width:670px; color:var(--muted); font-size:19px; }
+      .pill { display:inline-block; margin-top:10px; padding:7px 12px; border-radius:99px; background:var(--soft); color:var(--accent); font-weight:700; font-size:14px; }
+      section { margin:16px 0; padding:30px; border:1px solid var(--line); border-radius:22px; background:var(--card); box-shadow:0 10px 35px rgb(0 0 0 / 4%); }
+      ol,ul { padding-left:23px; }
+      li { margin:8px 0; }
+      code { padding:2px 6px; border-radius:6px; background:var(--soft); }
+      a { color:var(--accent); }
+      nav { display:flex; flex-wrap:wrap; gap:16px; margin-top:25px; }
+      nav a { font-weight:700; text-decoration:none; }
+      footer { color:var(--muted); padding:25px 4px; font-size:14px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="mark" aria-hidden="true">◖</div>
+        <h1>Arc for Chrome</h1>
+        <p class="lead">A local-first sidebar for vertical tabs, Spaces, folders, saved sites, Chrome history, and recently closed tabs.</p>
+        <span class="pill">No accounts · No analytics · No ads · No data sent to the developer</span>
+        <nav><a href="#setup">Setup</a><a href="#migration">Migration</a><a href="#support">Help</a><a href="privacy.html">Privacy policy</a></nav>
+      </header>
+
+      <section id="setup">
+        <h2>Quick setup</h2>
+        <ol>
+          <li>Install Arc for Chrome and open it from Chrome’s toolbar.</li>
+          <li>Review the local-data notice, then choose a fresh setup or import a backup.</li>
+          <li>Pin the extension to the toolbar for quick access.</li>
+          <li>Optionally open <code>chrome://settings/appearance</code>, use Vertical tabs, and place Chrome panels on the left for the compact layout.</li>
+        </ol>
+        <p>On macOS, the optional local companion can make the compact window transition and theme matching more reliable. Core sidebar features work without it.</p>
+      </section>
+
+      <section id="migration">
+        <h2>Move your setup</h2>
+        <h3>From another Arc for Chrome profile</h3>
+        <ol>
+          <li>Open Setup and privacy in the source profile.</li>
+          <li>Select Export sidebar backup.</li>
+          <li>In the new profile, select Sidebar backup and choose the downloaded JSON file.</li>
+        </ol>
+        <h3>From Arc on macOS</h3>
+        <p>During first-run setup, choose the locally generated <code>.arcsidebar</code> migration bundle. The import can preserve Spaces, Top Apps, saved tabs, folders, titles, order, Archive, and locally available history. Arc’s official data export is available as a limited fallback.</p>
+        <p>Imports are read only after you choose a file and are processed locally.</p>
+      </section>
+
+      <section id="support">
+        <h2>Help</h2>
+        <h3>The sidebar does not open</h3>
+        <p>Open the toolbar extension menu, select Arc for Chrome, and pin it. You can also use <code>Control+S</code> on macOS or <code>Alt+S</code> elsewhere.</p>
+        <h3>History or Archive is empty</h3>
+        <p>History shows Chrome history available in the current Chrome profile. Archive shows recently closed Chrome tabs and windows. Arc history requires a local migration bundle.</p>
+        <h3>Switch to the previous tab</h3>
+        <p>Use <code>Control+Q</code> on macOS or <code>Alt+Q</code> elsewhere.</p>
+        <h3>Remove all local extension data</h3>
+        <p>Remove the extension from Chrome and choose to clear its data. The extension has no publisher account or remote copy to delete.</p>
+      </section>
+
+      <footer>Independent product. Not affiliated with, endorsed by, or sponsored by The Browser Company or Google. · <a href="privacy.html">Privacy policy</a></footer>
+    </main>
+  </body>
+</html>
