@@ -1,0 +1,2 @@
+32b32247dd5d1dbd6f92c4044a1a14866d003415726d844a3d4e3d7902b54798  arc-for-chrome-migration-helper-1.6.1.zip
+3fac091034e4f38741c1551384a4b8147bdee5cf2eaf9cbf07e7cb42c416d9d2  arc-for-chrome-macos-helper-1.6.1.zip

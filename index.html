@@ -26,6 +26,10 @@
       a { color:var(--accent); }
       nav { display:flex; flex-wrap:wrap; gap:16px; margin-top:25px; }
       nav a { font-weight:700; text-decoration:none; }
+      .downloads { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin-top:18px; }
+      .download { display:block; padding:18px; border:1px solid var(--line); border-radius:16px; background:var(--bg); text-decoration:none; }
+      .download strong { display:block; color:var(--text); font-size:17px; }
+      .download span { display:block; margin-top:4px; color:var(--muted); font-size:14px; }
       footer { color:var(--muted); padding:25px 4px; font-size:14px; }
     </style>
   </head>
@@ -36,7 +40,7 @@
         <h1>Arc for Chrome</h1>
         <p class="lead">A local-first sidebar for vertical tabs, Spaces, folders, saved sites, Chrome history, and recently closed tabs.</p>
         <span class="pill">No accounts · No analytics · No ads · No data sent to the developer</span>
-        <nav><a href="#setup">Setup</a><a href="#migration">Migration</a><a href="#support">Help</a><a href="privacy.html">Privacy policy</a></nav>
+        <nav><a href="#setup">Setup</a><a href="#downloads">Downloads</a><a href="#migration">Migration</a><a href="#support">Help</a><a href="privacy.html">Privacy policy</a></nav>
       </header>
 
       <section id="setup">
@@ -50,6 +54,22 @@
         <p>On macOS, the optional local companion can make the compact window transition and theme matching more reliable. Core sidebar features work without it.</p>
       </section>
 
+      <section id="downloads">
+        <h2>Optional macOS helpers</h2>
+        <p>These helpers run only on your Mac. They have no updater, analytics, network connection, or publisher server. Arc for Chrome’s core sidebar works without them.</p>
+        <div class="downloads">
+          <a class="download" href="arc-for-chrome-migration-helper-1.6.1.zip" download>
+            <strong>Arc migration helper</strong>
+            <span>Creates one local <code>.arcsidebar</code> file containing Arc Spaces, folders, saved tabs, Archive, locally available history, and cached icons.</span>
+          </a>
+          <a class="download" href="arc-for-chrome-macos-helper-1.6.1.zip" download>
+            <strong>Compact layout helper</strong>
+            <span>Makes the macOS window offset and Chrome theme matching reliable. Requires local Accessibility permission for <code>/usr/bin/osascript</code>.</span>
+          </a>
+        </div>
+        <p><a href="CHECKSUMS.txt">SHA-256 checksums</a></p>
+      </section>
+
       <section id="migration">
         <h2>Move your setup</h2>
         <h3>From another Arc for Chrome profile</h3>
@@ -59,8 +79,23 @@
           <li>In the new profile, select Sidebar backup and choose the downloaded JSON file.</li>
         </ol>
         <h3>From Arc on macOS</h3>
-        <p>During first-run setup, choose the locally generated <code>.arcsidebar</code> migration bundle. The import can preserve Spaces, Top Apps, saved tabs, folders, titles, order, Archive, and locally available history. Arc’s official data export is available as a limited fallback.</p>
+        <ol>
+          <li>Download and unzip the <a href="arc-for-chrome-migration-helper-1.6.1.zip">Arc migration helper</a>.</li>
+          <li>Open Arc once and wait for its sidebar to finish loading.</li>
+          <li>Double-click <code>Prepare Arc Migration.command</code>. If macOS blocks it, Control-click it, select Open, then select Open again.</li>
+          <li>In Arc for Chrome setup, choose Move from Arc and select the new <code>.arcsidebar</code> file from Downloads.</li>
+        </ol>
+        <p>The import can preserve Spaces, Top Apps, saved tabs, folders, titles, order, Archive, locally available history, and cached icons. Arc’s official data export is available as a limited fallback.</p>
         <p>Imports are read only after you choose a file and are processed locally.</p>
+        <h3>Install the compact layout helper</h3>
+        <ol>
+          <li>Download and unzip the <a href="arc-for-chrome-macos-helper-1.6.1.zip">compact layout helper</a>.</li>
+          <li>In Arc for Chrome setup, select Copy extension ID.</li>
+          <li>Double-click <code>Install Arc for Chrome Helper.command</code> and paste the ID when asked.</li>
+          <li>If prompted, allow <code>/usr/bin/osascript</code> in System Settings → Privacy &amp; Security → Accessibility.</li>
+          <li>Return to setup and select Recheck helper.</li>
+        </ol>
+        <p>To remove it, run <code>uninstall-macos-helper.sh</code>. Arc for Chrome then uses Chrome’s built-in window API.</p>
       </section>
 
       <section id="support">
