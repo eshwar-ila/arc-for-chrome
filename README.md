@@ -124,4 +124,4 @@ Remove Arc for Chrome from Chrome and choose to clear its data. There is no publ
 
 This repository hosts the public setup guide, privacy policy, checksums, and optional macOS helper downloads. The packaged Chrome extension is distributed through the Chrome Web Store.
 
-For help, open an issue in this repository or email [eshwar.ila@gmail.com](mailto:eshwar.ila@gmail.com).
+For help, open an issue in this repository.
