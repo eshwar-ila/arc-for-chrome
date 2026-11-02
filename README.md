@@ -34,10 +34,10 @@ Detailed setup and support: <https://eshwar-ila.github.io/arc-for-chrome/>
 
 The migration helper creates one local `.arcsidebar` file. It can preserve Spaces, Top Apps, folders, saved tabs, titles, order, Archive, locally available Arc history, and cached icons.
 
-1. [Download the migration helper](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-migration-helper-1.6.2.zip) and unzip it.
+1. [Download the migration helper](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-migration-helper-1.6.3.zip) and unzip it.
 2. Open Arc once and wait for its sidebar to finish loading.
-3. Control-click `Prepare Arc Migration.command`, select **Open**, then select **Open** again. This is the normal Gatekeeper approval for a downloaded local script.
-5. In Arc for Chrome, choose **Move from Arc** and select the `.arcsidebar` file created in Downloads.
+3. Open `Prepare Arc Migration.command` once. If macOS says it cannot verify the file or offers to move it to Trash, dismiss the warning. Open **System Settings → Privacy & Security**, scroll to **Security**, select **Open Anyway**, authenticate, then select **Open**.
+4. In Arc for Chrome, choose **Move from Arc** and select the `.arcsidebar` file created in Downloads.
 
 The helper reads local Arc data only when you run it. It has no updater, analytics, network connection, or publisher server.
 
@@ -52,9 +52,9 @@ The helper reads local Arc data only when you run it. It has no updater, analyti
 
 The core sidebar works without the companion. The companion makes the compact window offset and Chrome theme matching more reliable.
 
-1. [Download the compact-layout helper](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-macos-helper-1.6.2.zip) and unzip it.
+1. [Download the compact-layout helper](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-macos-helper-1.6.3.zip) and unzip it.
 2. In Arc for Chrome setup, select **Copy extension ID**.
-3. Control-click `Install Arc for Chrome Helper.command`, select **Open**, then **Open** again, and paste the ID.
+3. Open `Install Arc for Chrome Helper.command` once. If macOS blocks it or offers to move it to Trash, dismiss the warning. Open **System Settings → Privacy & Security**, scroll to **Security**, select **Open Anyway**, authenticate, then select **Open** and paste the ID.
 4. If Accessibility opens, select **+**, press **Command-Shift-G**, enter `/usr/bin/osascript`, select Open, and enable it.
 5. Return to setup and select **Recheck helper**.
 
@@ -96,8 +96,8 @@ Read the full [privacy policy](https://eshwar-ila.github.io/arc-for-chrome/priva
 
 ## Downloads and verification
 
-- [Arc migration helper 1.6.2](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-migration-helper-1.6.2.zip)
-- [macOS compact-layout helper 1.6.2](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-macos-helper-1.6.2.zip)
+- [Arc migration helper 1.6.3](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-migration-helper-1.6.3.zip)
+- [macOS compact-layout helper 1.6.3](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-macos-helper-1.6.3.zip)
 - [SHA-256 checksums](https://eshwar-ila.github.io/arc-for-chrome/CHECKSUMS.txt)
 
 ## Troubleshooting
@@ -108,7 +108,7 @@ Open Chrome's extension menu, select Arc for Chrome, and pin it. You can also us
 
 ### macOS blocks a helper
 
-Control-click the `.command` file, select **Open**, then select **Open** in the confirmation. Download helpers only from the official support page and compare their SHA-256 checksum if desired. The migration helper reads Arc locally and creates one file in Downloads. The optional compact helper can move the front Chrome window and read Chrome's saved theme choice; it cannot read tabs, history, pages, passwords, accounts, or network traffic.
+Open the `.command` file once. If macOS says it cannot verify the file or offers to move it to Trash, dismiss the warning—do not move it to Trash. Open **System Settings → Privacy & Security**, scroll to **Security**, select **Open Anyway**, authenticate, then select **Open**. If Open Anyway is missing, try opening the file once more and return to Privacy & Security. Download helpers only from the official support page and compare their SHA-256 checksum if desired. The migration helper reads Arc locally and creates one file in Downloads. The optional compact helper can move the front Chrome window and read Chrome's saved theme choice; it cannot read tabs, history, pages, passwords, accounts, or network traffic.
 
 ### Accessibility does not show osascript
 

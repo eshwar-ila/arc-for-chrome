@@ -59,11 +59,11 @@
         <h2>Optional macOS helpers</h2>
         <p>These helpers run only on your Mac. They have no updater, analytics, network connection, or publisher server. Arc for Chrome’s core sidebar works without them.</p>
         <div class="downloads">
-          <a class="download" href="arc-for-chrome-migration-helper-1.6.2.zip" download>
+          <a class="download" href="arc-for-chrome-migration-helper-1.6.3.zip" download>
             <strong>Arc migration helper</strong>
             <span>Creates one local <code>.arcsidebar</code> file containing Arc Spaces, folders, saved tabs, Archive, locally available history, and cached icons.</span>
           </a>
-          <a class="download" href="arc-for-chrome-macos-helper-1.6.2.zip" download>
+          <a class="download" href="arc-for-chrome-macos-helper-1.6.3.zip" download>
             <strong>Compact layout helper</strong>
             <span>Makes the macOS window offset and Chrome theme matching reliable. Requires local Accessibility permission for <code>/usr/bin/osascript</code>.</span>
           </a>
@@ -81,18 +81,18 @@
         </ol>
         <h3>From Arc on macOS</h3>
         <ol>
-          <li>Download and unzip the <a href="arc-for-chrome-migration-helper-1.6.2.zip">Arc migration helper</a>.</li>
+          <li>Download and unzip the <a href="arc-for-chrome-migration-helper-1.6.3.zip">Arc migration helper</a>.</li>
           <li>Open Arc once and wait for its sidebar to finish loading.</li>
-          <li>Control-click <code>Prepare Arc Migration.command</code>, select <strong>Open</strong>, then <strong>Open</strong> again. This is the normal Gatekeeper approval for a downloaded local script.</li>
+          <li>Open <code>Prepare Arc Migration.command</code> once. If macOS says it cannot verify the file or offers to move it to Trash, dismiss the warning. Open <strong>System Settings → Privacy &amp; Security</strong>, scroll to <strong>Security</strong>, select <strong>Open Anyway</strong>, authenticate, then select <strong>Open</strong>.</li>
           <li>In Arc for Chrome setup, choose Move from Arc and select the new <code>.arcsidebar</code> file from Downloads.</li>
         </ol>
         <p>The import can preserve Spaces, Top Apps, saved tabs, folders, titles, order, Archive, locally available history, and cached icons. Arc’s official data export is available as a limited fallback.</p>
         <p>Imports are read only after you choose a file and are processed locally.</p>
         <h3>Install the compact layout helper</h3>
         <ol>
-          <li>Download and unzip the <a href="arc-for-chrome-macos-helper-1.6.2.zip">compact layout helper</a>.</li>
+          <li>Download and unzip the <a href="arc-for-chrome-macos-helper-1.6.3.zip">compact layout helper</a>.</li>
           <li>In Arc for Chrome setup, select Copy extension ID.</li>
-          <li>Control-click <code>Install Arc for Chrome Helper.command</code>, select <strong>Open</strong>, then <strong>Open</strong> again, and paste the ID.</li>
+          <li>Open <code>Install Arc for Chrome Helper.command</code> once. If macOS blocks it or offers to move it to Trash, dismiss the warning. Open <strong>System Settings → Privacy &amp; Security</strong>, scroll to <strong>Security</strong>, select <strong>Open Anyway</strong>, authenticate, then select <strong>Open</strong> and paste the ID.</li>
           <li>If Accessibility opens, select <strong>+</strong>, press <strong>Command-Shift-G</strong>, enter <code>/usr/bin/osascript</code>, select Open, and enable it.</li>
           <li>Return to setup and select Recheck helper.</li>
         </ol>
@@ -109,7 +109,7 @@
           <li>Only migration or backup files you explicitly choose.</li>
         </ul>
         <h3>Why macOS shows security prompts</h3>
-        <p>The optional helpers are downloadable local scripts rather than App Store apps, so Gatekeeper asks you to approve them with Control-click → Open. The compact helper requests Accessibility only to move the front Chrome window. It cannot read tabs, history, page contents, passwords, accounts, or network traffic.</p>
+        <p>The optional helpers are downloadable local scripts rather than App Store apps, so Gatekeeper may block them. Open the file once, dismiss the warning, then approve it from <strong>System Settings → Privacy &amp; Security → Security → Open Anyway</strong>. The compact helper requests Accessibility only to move the front Chrome window. It cannot read tabs, history, page contents, passwords, accounts, or network traffic.</p>
         <h3>How to verify or remove everything</h3>
         <ul>
           <li>Compare a download with the published <a href="CHECKSUMS.txt">SHA-256 checksums</a>.</li>
@@ -130,7 +130,7 @@
         <h3>Remove all local extension data</h3>
         <p>Remove the extension from Chrome and choose to clear its data. The extension has no publisher account or remote copy to delete.</p>
         <h3>macOS says the helper cannot be opened</h3>
-        <p>Do not double-click repeatedly. In Finder, Control-click the <code>.command</code> file, select <strong>Open</strong>, then select <strong>Open</strong> in the confirmation. Download helpers only from this page and verify the checksum if desired.</p>
+        <p>Open the <code>.command</code> file once. If macOS says it cannot verify the file or offers to move it to Trash, dismiss the warning—do not move the file to Trash. Open <strong>System Settings → Privacy &amp; Security</strong>, scroll to <strong>Security</strong>, select <strong>Open Anyway</strong>, authenticate, then select <strong>Open</strong>. If Open Anyway is missing, try opening the file once more and return to Privacy &amp; Security. Download helpers only from this page and verify the checksum if desired.</p>
         <h3>Accessibility does not list osascript</h3>
         <p>Select <strong>+</strong>, press <strong>Command-Shift-G</strong>, enter <code>/usr/bin/osascript</code>, select Open, then enable it. Return to Arc for Chrome and select Recheck helper.</p>
       </section>
