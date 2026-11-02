@@ -18,17 +18,15 @@ Arc for Chrome brings an Arc-inspired sidebar workflow to Google Chrome. Organiz
 
 ## Install and set up
 
-The Chrome Web Store listing is currently under review. After it is published, it will be available at:
-
 <https://chromewebstore.google.com/detail/mhmfcepflnlphogaaelglppgoljbkklm>
 
 After installation:
 
-1. Open **Arc for Chrome** from Chrome's toolbar and pin it for quick access.
-2. Review the local-data notice.
-3. Choose a fresh setup, import an Arc migration bundle, or restore an Arc for Chrome backup.
-4. Create or rename Spaces, add folders, and drag open tabs where you want them.
-5. Optionally configure Chrome's vertical tabs and left-side panels from `chrome://settings/appearance`.
+1. Select Chrome's extensions button, pin **Arc for Chrome**, and open it.
+2. Choose **Start fresh**, **Move from Arc**, or **Restore a backup**. Setup shows only the steps for that choice.
+3. Select **Open Chrome appearance**, set Tab position to **Vertical**, and Chrome panels to **Left**.
+4. Select **Finish setup**. Create Spaces with **+** and drag tabs onto a Space dot to move them.
+5. Install the optional compact macOS helper later only if you want the edge-to-edge window layout.
 
 Detailed setup and support: <https://eshwar-ila.github.io/arc-for-chrome/>
 
@@ -36,10 +34,9 @@ Detailed setup and support: <https://eshwar-ila.github.io/arc-for-chrome/>
 
 The migration helper creates one local `.arcsidebar` file. It can preserve Spaces, Top Apps, folders, saved tabs, titles, order, Archive, locally available Arc history, and cached icons.
 
-1. [Download the migration helper](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-migration-helper-1.6.1.zip) and unzip it.
+1. [Download the migration helper](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-migration-helper-1.6.2.zip) and unzip it.
 2. Open Arc once and wait for its sidebar to finish loading.
-3. Double-click `Prepare Arc Migration.command`.
-4. If macOS blocks it, Control-click the file, select **Open**, then select **Open** again.
+3. Control-click `Prepare Arc Migration.command`, select **Open**, then select **Open** again. This is the normal Gatekeeper approval for a downloaded local script.
 5. In Arc for Chrome, choose **Move from Arc** and select the `.arcsidebar` file created in Downloads.
 
 The helper reads local Arc data only when you run it. It has no updater, analytics, network connection, or publisher server.
@@ -55,10 +52,10 @@ The helper reads local Arc data only when you run it. It has no updater, analyti
 
 The core sidebar works without the companion. The companion makes the compact window offset and Chrome theme matching more reliable.
 
-1. [Download the compact-layout helper](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-macos-helper-1.6.1.zip) and unzip it.
+1. [Download the compact-layout helper](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-macos-helper-1.6.2.zip) and unzip it.
 2. In Arc for Chrome setup, select **Copy extension ID**.
-3. Double-click `Install Arc for Chrome Helper.command` and paste the ID when asked.
-4. If prompted, allow `/usr/bin/osascript` in **System Settings → Privacy & Security → Accessibility**.
+3. Control-click `Install Arc for Chrome Helper.command`, select **Open**, then **Open** again, and paste the ID.
+4. If Accessibility opens, select **+**, press **Command-Shift-G**, enter `/usr/bin/osascript`, select Open, and enable it.
 5. Return to setup and select **Recheck helper**.
 
 Run `uninstall-macos-helper.sh` from the downloaded helper to remove it. Arc for Chrome will then use Chrome's built-in window API.
@@ -93,13 +90,14 @@ Chrome permissions are used only to provide the visible sidebar features:
 | `favicon` | Display website icons |
 | `sidePanel` | Render the primary sidebar interface |
 | `nativeMessaging` | Communicate with the optional local macOS companion when installed |
+| `system.display` | Keep the compact window aligned to the monitor containing Chrome |
 
 Read the full [privacy policy](https://eshwar-ila.github.io/arc-for-chrome/privacy.html).
 
 ## Downloads and verification
 
-- [Arc migration helper 1.6.1](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-migration-helper-1.6.1.zip)
-- [macOS compact-layout helper 1.6.1](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-macos-helper-1.6.1.zip)
+- [Arc migration helper 1.6.2](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-migration-helper-1.6.2.zip)
+- [macOS compact-layout helper 1.6.2](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-macos-helper-1.6.2.zip)
 - [SHA-256 checksums](https://eshwar-ila.github.io/arc-for-chrome/CHECKSUMS.txt)
 
 ## Troubleshooting
@@ -107,6 +105,14 @@ Read the full [privacy policy](https://eshwar-ila.github.io/arc-for-chrome/priva
 ### The sidebar does not open
 
 Open Chrome's extension menu, select Arc for Chrome, and pin it. You can also use the sidebar shortcut listed above.
+
+### macOS blocks a helper
+
+Control-click the `.command` file, select **Open**, then select **Open** in the confirmation. Download helpers only from the official support page and compare their SHA-256 checksum if desired. The migration helper reads Arc locally and creates one file in Downloads. The optional compact helper can move the front Chrome window and read Chrome's saved theme choice; it cannot read tabs, history, pages, passwords, accounts, or network traffic.
+
+### Accessibility does not show osascript
+
+Select **+**, press **Command-Shift-G**, enter `/usr/bin/osascript`, select Open, and enable it. Return to setup and select **Recheck helper**.
 
 ### History or Archive is empty
 
