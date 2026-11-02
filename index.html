@@ -40,29 +40,30 @@
         <h1>Arc for Chrome</h1>
         <p class="lead">A local-first sidebar for vertical tabs, Spaces, folders, saved sites, Chrome history, and recently closed tabs.</p>
         <span class="pill">No accounts · No analytics · No ads · No data sent to the developer</span>
-        <nav><a href="#setup">Setup</a><a href="#downloads">Downloads</a><a href="#migration">Migration</a><a href="#support">Help</a><a href="privacy.html">Privacy policy</a></nav>
+        <nav><a href="#setup">Setup</a><a href="#migration">Move from Arc</a><a href="#safety">Safety</a><a href="#support">Help</a><a href="privacy.html">Privacy policy</a></nav>
       </header>
 
       <section id="setup">
-        <h2>Quick setup</h2>
+        <h2>Start here — no Terminal required</h2>
         <ol>
-          <li>Install Arc for Chrome and open it from Chrome’s toolbar.</li>
-          <li>Review the local-data notice, then choose a fresh setup or import a backup.</li>
-          <li>Pin the extension to the toolbar for quick access.</li>
-          <li>Optionally open <code>chrome://settings/appearance</code>, use Vertical tabs, and place Chrome panels on the left for the compact layout.</li>
+          <li><a href="https://chromewebstore.google.com/detail/mhmfcepflnlphogaaelglppgoljbkklm">Install Arc for Chrome from the Chrome Web Store</a>.</li>
+          <li>Select Chrome’s extensions button, pin <strong>Arc for Chrome</strong>, then open it.</li>
+          <li>Choose <strong>Start fresh</strong>, <strong>Move from Arc</strong>, or <strong>Restore a backup</strong>. The setup screen shows only the steps for your choice.</li>
+          <li>For the intended left layout, select <strong>Open Chrome appearance</strong>, set Tab position to <strong>Vertical</strong>, and Chrome panels to <strong>Left</strong>.</li>
+          <li>Select <strong>Finish setup</strong>. Create Spaces with <strong>+</strong>; drag tabs onto a Space dot to move them.</li>
         </ol>
-        <p>On macOS, the optional local companion can make the compact window transition and theme matching more reliable. Core sidebar features work without it.</p>
+        <p>That is enough for the normal sidebar. The macOS compact-layout helper is optional and can be installed later from Setup and privacy.</p>
       </section>
 
       <section id="downloads">
         <h2>Optional macOS helpers</h2>
         <p>These helpers run only on your Mac. They have no updater, analytics, network connection, or publisher server. Arc for Chrome’s core sidebar works without them.</p>
         <div class="downloads">
-          <a class="download" href="arc-for-chrome-migration-helper-1.6.1.zip" download>
+          <a class="download" href="arc-for-chrome-migration-helper-1.6.2.zip" download>
             <strong>Arc migration helper</strong>
             <span>Creates one local <code>.arcsidebar</code> file containing Arc Spaces, folders, saved tabs, Archive, locally available history, and cached icons.</span>
           </a>
-          <a class="download" href="arc-for-chrome-macos-helper-1.6.1.zip" download>
+          <a class="download" href="arc-for-chrome-macos-helper-1.6.2.zip" download>
             <strong>Compact layout helper</strong>
             <span>Makes the macOS window offset and Chrome theme matching reliable. Requires local Accessibility permission for <code>/usr/bin/osascript</code>.</span>
           </a>
@@ -80,22 +81,42 @@
         </ol>
         <h3>From Arc on macOS</h3>
         <ol>
-          <li>Download and unzip the <a href="arc-for-chrome-migration-helper-1.6.1.zip">Arc migration helper</a>.</li>
+          <li>Download and unzip the <a href="arc-for-chrome-migration-helper-1.6.2.zip">Arc migration helper</a>.</li>
           <li>Open Arc once and wait for its sidebar to finish loading.</li>
-          <li>Double-click <code>Prepare Arc Migration.command</code>. If macOS blocks it, Control-click it, select Open, then select Open again.</li>
+          <li>Control-click <code>Prepare Arc Migration.command</code>, select <strong>Open</strong>, then <strong>Open</strong> again. This is the normal Gatekeeper approval for a downloaded local script.</li>
           <li>In Arc for Chrome setup, choose Move from Arc and select the new <code>.arcsidebar</code> file from Downloads.</li>
         </ol>
         <p>The import can preserve Spaces, Top Apps, saved tabs, folders, titles, order, Archive, locally available history, and cached icons. Arc’s official data export is available as a limited fallback.</p>
         <p>Imports are read only after you choose a file and are processed locally.</p>
         <h3>Install the compact layout helper</h3>
         <ol>
-          <li>Download and unzip the <a href="arc-for-chrome-macos-helper-1.6.1.zip">compact layout helper</a>.</li>
+          <li>Download and unzip the <a href="arc-for-chrome-macos-helper-1.6.2.zip">compact layout helper</a>.</li>
           <li>In Arc for Chrome setup, select Copy extension ID.</li>
-          <li>Double-click <code>Install Arc for Chrome Helper.command</code> and paste the ID when asked.</li>
-          <li>If prompted, allow <code>/usr/bin/osascript</code> in System Settings → Privacy &amp; Security → Accessibility.</li>
+          <li>Control-click <code>Install Arc for Chrome Helper.command</code>, select <strong>Open</strong>, then <strong>Open</strong> again, and paste the ID.</li>
+          <li>If Accessibility opens, select <strong>+</strong>, press <strong>Command-Shift-G</strong>, enter <code>/usr/bin/osascript</code>, select Open, and enable it.</li>
           <li>Return to setup and select Recheck helper.</li>
         </ol>
         <p>To remove it, run <code>uninstall-macos-helper.sh</code>. Arc for Chrome then uses Chrome’s built-in window API.</p>
+      </section>
+
+      <section id="safety">
+        <h2>Is it safe?</h2>
+        <p><strong>Arc for Chrome is local-first:</strong> no account, analytics, advertising, tracking, updater, or publisher-operated server. Browsing data is used only for the sidebar features and is not sent to the developer.</p>
+        <h3>What the extension can read</h3>
+        <ul>
+          <li>Open tabs, Chrome history, recently closed tabs, and favicons so it can display Tabs, History, Archive, and search.</li>
+          <li>Local display bounds so the compact layout stays on the correct monitor.</li>
+          <li>Only migration or backup files you explicitly choose.</li>
+        </ul>
+        <h3>Why macOS shows security prompts</h3>
+        <p>The optional helpers are downloadable local scripts rather than App Store apps, so Gatekeeper asks you to approve them with Control-click → Open. The compact helper requests Accessibility only to move the front Chrome window. It cannot read tabs, history, page contents, passwords, accounts, or network traffic.</p>
+        <h3>How to verify or remove everything</h3>
+        <ul>
+          <li>Compare a download with the published <a href="CHECKSUMS.txt">SHA-256 checksums</a>.</li>
+          <li>Remove Accessibility access in System Settings → Privacy &amp; Security → Accessibility.</li>
+          <li>Run <code>uninstall-macos-helper.sh</code> to remove the compact helper.</li>
+          <li>Remove the Chrome extension and clear its data to delete all local extension storage.</li>
+        </ul>
       </section>
 
       <section id="support">
@@ -108,6 +129,10 @@
         <p>Use <code>Control+Q</code> on macOS or <code>Alt+Q</code> elsewhere.</p>
         <h3>Remove all local extension data</h3>
         <p>Remove the extension from Chrome and choose to clear its data. The extension has no publisher account or remote copy to delete.</p>
+        <h3>macOS says the helper cannot be opened</h3>
+        <p>Do not double-click repeatedly. In Finder, Control-click the <code>.command</code> file, select <strong>Open</strong>, then select <strong>Open</strong> in the confirmation. Download helpers only from this page and verify the checksum if desired.</p>
+        <h3>Accessibility does not list osascript</h3>
+        <p>Select <strong>+</strong>, press <strong>Command-Shift-G</strong>, enter <code>/usr/bin/osascript</code>, select Open, then enable it. Return to Arc for Chrome and select Recheck helper.</p>
       </section>
 
       <footer>Independent product. Not affiliated with, endorsed by, or sponsored by The Browser Company or Google. · <a href="privacy.html">Privacy policy</a></footer>
