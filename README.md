@@ -52,7 +52,7 @@ The helper reads local Arc data only when you run it. It has no updater, analyti
 
 The core sidebar works without the companion. The companion makes the compact window offset and Chrome theme matching more reliable.
 
-1. [Download the compact-layout helper](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-macos-helper-1.6.3.zip) and unzip it.
+1. [Download the compact-layout helper](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-macos-helper-1.6.4.zip) and unzip it.
 2. In Arc for Chrome setup, select **Copy extension ID**.
 3. Open `Install Arc for Chrome Helper.command` once. If macOS blocks it or offers to move it to Trash, dismiss the warning. Open **System Settings → Privacy & Security**, scroll to **Security**, select **Open Anyway**, authenticate, then select **Open** and paste the ID.
 4. If Accessibility opens, select **+**, press **Command-Shift-G**, enter `/usr/bin/osascript`, select Open, and enable it.
@@ -67,7 +67,7 @@ Run `uninstall-macos-helper.sh` from the downloaded helper to remove it. Arc for
 | Open or close the sidebar | `Control+S` | `Alt+S` |
 | Switch to the previously used tab | `Control+Q` | `Alt+Q` |
 
-Shortcuts can be changed at `chrome://extensions/shortcuts`.
+Chrome can leave suggested shortcuts unassigned. Open **Setup and privacy → Set keyboard shortcuts**, or go directly to `chrome://extensions/shortcuts`, and assign both commands.
 
 ## Privacy
 
@@ -97,7 +97,7 @@ Read the full [privacy policy](https://eshwar-ila.github.io/arc-for-chrome/priva
 ## Downloads and verification
 
 - [Arc migration helper 1.6.3](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-migration-helper-1.6.3.zip)
-- [macOS compact-layout helper 1.6.3](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-macos-helper-1.6.3.zip)
+- [macOS compact-layout helper 1.6.4](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-macos-helper-1.6.4.zip)
 - [SHA-256 checksums](https://eshwar-ila.github.io/arc-for-chrome/CHECKSUMS.txt)
 
 ## Troubleshooting

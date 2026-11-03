@@ -63,7 +63,7 @@
             <strong>Arc migration helper</strong>
             <span>Creates one local <code>.arcsidebar</code> file containing Arc Spaces, folders, saved tabs, Archive, locally available history, and cached icons.</span>
           </a>
-          <a class="download" href="arc-for-chrome-macos-helper-1.6.3.zip" download>
+          <a class="download" href="arc-for-chrome-macos-helper-1.6.4.zip" download>
             <strong>Compact layout helper</strong>
             <span>Makes the macOS window offset and Chrome theme matching reliable. Requires local Accessibility permission for <code>/usr/bin/osascript</code>.</span>
           </a>
@@ -90,12 +90,13 @@
         <p>Imports are read only after you choose a file and are processed locally.</p>
         <h3>Install the compact layout helper</h3>
         <ol>
-          <li>Download and unzip the <a href="arc-for-chrome-macos-helper-1.6.3.zip">compact layout helper</a>.</li>
+          <li>Download and unzip the <a href="arc-for-chrome-macos-helper-1.6.4.zip">compact layout helper</a>.</li>
           <li>In Arc for Chrome setup, select Copy extension ID.</li>
           <li>Open <code>Install Arc for Chrome Helper.command</code> once. If macOS blocks it or offers to move it to Trash, dismiss the warning. Open <strong>System Settings → Privacy &amp; Security</strong>, scroll to <strong>Security</strong>, select <strong>Open Anyway</strong>, authenticate, then select <strong>Open</strong> and paste the ID.</li>
           <li>If Accessibility opens, select <strong>+</strong>, press <strong>Command-Shift-G</strong>, enter <code>/usr/bin/osascript</code>, select Open, and enable it.</li>
           <li>Return to setup and select Recheck helper.</li>
         </ol>
+        <p>The installer records the working Python 3 path and removes the download quarantine flag from the installed native host so Chrome can start it reliably.</p>
         <p>To remove it, run <code>uninstall-macos-helper.sh</code>. Arc for Chrome then uses Chrome’s built-in window API.</p>
       </section>
 
