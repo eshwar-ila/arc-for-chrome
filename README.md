@@ -8,7 +8,9 @@ Arc for Chrome brings an Arc-inspired sidebar workflow to Google Chrome. Organiz
 
 - Left sidebar for open tabs, saved sites, Spaces, and folders
 - Top Apps for frequently used websites
-- Drag-and-drop organization, renaming, pinning, and reordering
+- Drag-and-drop organization, including reordering real open tabs and moving tabs between Open tabs, Spaces, and folders
+- Duplicate URL prevention and automatic same-window duplicate cleanup
+- Automatic Archive for web tabs inactive for 24 hours, while active, pinned, audible, and Chrome-internal tabs remain protected
 - Search across open tabs, saved items, and Chrome history
 - Archive for recently closed Chrome tabs and windows
 - Local Arc migration on macOS, including locally available history and cached icons
@@ -91,6 +93,18 @@ Chrome permissions are used only to provide the visible sidebar features:
 | `sidePanel` | Render the primary sidebar interface |
 | `nativeMessaging` | Communicate with the optional local macOS companion when installed |
 | `system.display` | Keep the compact window aligned to the monitor containing Chrome |
+| `alarms` | Run the local inactive-tab Archive check approximately every 30 minutes |
+
+## Version 1.6.12
+
+- Reorder Chrome's real open tabs with drag and drop.
+- Drag saved tabs into Open tabs and open tabs into Spaces or folders.
+- Focus and refresh an existing same-window tab instead of opening a duplicate URL.
+- Remove existing same-window duplicates without adding those cleanup closures to Archive.
+- Automatically archive web tabs after 24 hours of inactivity. Active, pinned, audible, and Chrome-internal tabs are protected.
+- Keep the same URL independent across separate Chrome windows.
+- Use `Control+S` to toggle the sidebar and `Control+Q` to switch to the previous tab on macOS.
+- Follow the device light/dark appearance when the optional theme helper is unavailable instead of forcing a black theme.
 
 Read the full [privacy policy](https://eshwar-ila.github.io/arc-for-chrome/privacy.html).
 
