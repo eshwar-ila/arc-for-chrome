@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.6.13 — November 23, 2026
+
+- Opened saved folder links in place without duplicating them under Open tabs.
+- Kept redirected websites associated with their original saved sidebar row.
+- Added an X to the active saved row that closes its temporary live tab, returns to the previous tab, and preserves the saved link.
+
 ## 1.6.12 — November 12, 2026
 
 - Added drag-and-drop reordering for Chrome's real open tabs.

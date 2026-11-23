@@ -95,6 +95,12 @@ Chrome permissions are used only to provide the visible sidebar features:
 | `system.display` | Keep the compact window aligned to the monitor containing Chrome |
 | `alarms` | Run the local inactive-tab Archive check approximately every 30 minutes |
 
+## Version 1.6.13
+
+- Open a saved folder link in its existing sidebar row instead of duplicating it under Open tabs.
+- Keep the saved row linked to its live tab even when the website redirects to a different URL.
+- Use the row's X to close the temporary live tab and return to the previously active tab without removing the saved link.
+
 ## Version 1.6.12
 
 - Reorder Chrome's real open tabs with drag and drop.
