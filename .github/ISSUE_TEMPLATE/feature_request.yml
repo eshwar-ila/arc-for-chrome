@@ -1,0 +1,42 @@
+name: Feature request
+description: Suggest an improvement for Arc for Chrome
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Arc for Chrome. Feature requests are public. Do not include passwords, private URLs, browsing history, or personal information.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe what is difficult today and when it happens.
+      placeholder: I find it difficult to…
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: What would you like Arc for Chrome to do?
+      description: Describe the behavior you want.
+      placeholder: I would like…
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or examples
+      description: Optional. Share other approaches or public examples that may help.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - All platforms
+    validations:
+      required: true

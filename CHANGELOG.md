@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.6.14 — November 23, 2026
+
+- Focused already-open saved tabs without refreshing them or resetting their current page state.
+- Added a separate Return to saved URL control when a saved tab navigates elsewhere.
+- Kept the close action and saved sidebar structure unchanged.
+
 ## 1.6.13 — November 23, 2026
 
 - Opened saved folder links in place without duplicating them under Open tabs.

@@ -95,6 +95,12 @@ Chrome permissions are used only to provide the visible sidebar features:
 | `system.display` | Keep the compact window aligned to the monitor containing Chrome |
 | `alarms` | Run the local inactive-tab Archive check approximately every 30 minutes |
 
+## Version 1.6.14
+
+- Focus an already-open saved tab without refreshing it or losing its current page state.
+- Show a separate **Return to saved URL** control after a saved tab navigates elsewhere.
+- Return that same live tab to its original saved URL only when the user selects the return control.
+
 ## Version 1.6.13
 
 - Open a saved folder link in its existing sidebar row instead of duplicating it under Open tabs.
@@ -150,4 +156,4 @@ Remove Arc for Chrome from Chrome and choose to clear its data. There is no publ
 
 This repository hosts the public setup guide, privacy policy, checksums, and optional macOS helper downloads. The packaged Chrome extension is distributed through the Chrome Web Store.
 
-For help, open an issue in this repository.
+For help, open an issue in this repository. Have an idea? [Request a feature](https://github.com/eshwar-ila/arc-for-chrome/issues/new?template=feature_request.yml).
