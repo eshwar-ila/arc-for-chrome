@@ -52,6 +52,9 @@ The helper reads local Arc data only when you run it. It has no updater, analyti
 
 ## Optional compact layout on macOS
 
+**For extension 1.6.19** download the [1.6.19 layout helper](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-macos-helper-1.6.19.zip), unzip it, open **Install Helper.command**, then choose **Recheck helper** in sidebar settings. Drag the handle on the right edge of the sidebar to resize it. For exact theme matching, approve access to your Chrome profile when prompted. The steps below apply to earlier versions.
+
+
 The core sidebar works without the companion. The companion makes the compact window offset and Chrome theme matching more reliable.
 
 1. [Download the compact-layout helper](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-macos-helper-1.6.4.zip) and unzip it.
