@@ -52,7 +52,7 @@ The helper reads local Arc data only when you run it. It has no updater, analyti
 
 ## Optional compact layout on macOS
 
-**For extension 1.6.19** download the [1.6.19 layout helper](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-macos-helper-1.6.19.zip), unzip it, open **Install Helper.command**, then choose **Recheck helper** in sidebar settings. Drag the handle on the right edge of the sidebar to resize it. For exact theme matching, approve access to your Chrome profile when prompted. The steps below apply to earlier versions.
+**For extensions 1.6.19 and 1.6.20** download the [1.6.19 layout helper](https://eshwar-ila.github.io/arc-for-chrome/arc-for-chrome-macos-helper-1.6.19.zip), unzip it, open **Install Helper.command**, then choose **Recheck helper** in sidebar settings. Drag the handle on the right edge of the sidebar to resize it. For exact theme matching, approve access to your Chrome profile when prompted. The steps below apply to earlier versions.
 
 
 The core sidebar works without the companion. The companion makes the compact window offset and Chrome theme matching more reliable.
@@ -69,10 +69,11 @@ Run `uninstall-macos-helper.sh` from the downloaded helper to remove it. Arc for
 
 | Action | macOS | Windows/Linux |
 | --- | --- | --- |
+| Open the search launcher | `Command+T` | `Alt+T` |
 | Open or close the sidebar | `Control+S` | `Alt+S` |
 | Switch to the previously used tab | `Control+Q` | `Alt+Q` |
 
-Chrome can leave suggested shortcuts unassigned. Open **Setup and privacy → Set keyboard shortcuts**, or go directly to `chrome://extensions/shortcuts`, and assign both commands.
+Chrome can leave suggested shortcuts unassigned. Open **Setup and privacy → Set keyboard shortcuts**, or go directly to `chrome://extensions/shortcuts`, and assign the shortcuts you want.
 
 ## Privacy
 
@@ -88,6 +89,8 @@ Chrome permissions are used only to provide the visible sidebar features:
 
 | Permission | Purpose |
 | --- | --- |
+| `activeTab` and `scripting` | Show the launcher over the current webpage when invoked |
+| `search` | Run a selected web search using Chrome’s configured provider |
 | `tabs` | Display, activate, create, close, move, and pin tabs |
 | `history` | Search Chrome history locally |
 | `sessions` | Show and restore recently closed tabs and windows |

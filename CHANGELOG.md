@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.6.20
+
+- The launcher opens over the active webpage with a translucent backdrop. On protected Chrome pages it opens in a separate tab. Escape dismisses it.
+- The search field stays in place and appears in the sidebar theme on first paint. Web search comes first, followed by up to five matches each from Open tabs, Archive, and History.
+- Includes the sidebar resizing improvements from 1.6.19 and uses the same macOS layout helper.
+
 ## 1.6.19
 
 - The launcher search field stays in place as matches appear or disappear. Long result lists scroll beneath it.
