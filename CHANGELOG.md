@@ -2,6 +2,8 @@
 
 ## 1.6.19
 
+- The launcher search field stays in place as matches appear or disappear. Long result lists scroll beneath it.
+
 - Drag the handle on the right edge of the compact macOS sidebar to make it narrower or wider. Closing the panel restores the window.
 - Store users upgrading from the older layout helper can download the 1.6.19 helper in sidebar settings. The migration helper is unchanged.
 
